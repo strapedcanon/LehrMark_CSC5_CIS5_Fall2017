@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Dr. Mark E. Lehr
  * Created on August 31, 2017, 11:42 PM
- * Purpose:  Creating a class template
+ * Purpose:  Land Calculation Acres/miles^2
  */
 
 //System Libraries
@@ -12,20 +12,28 @@ using namespace std;    //Standard Name-space under which System Libraries resid
 //User Libraries
 
 //Global Constants - Not variables only Math/Science/Conversion constants
+const float CNVFTM=1.0/5280/5280;  //Conversion from ft^2 to miles^2
+const float CNVFTA=1.0/43560;      //Conversion from ft^2 to Acres
 
 //Function Prototypes
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare Variables
+    float nft2,nacres,nmiles2;
     
-    //Initialize Variables
-    
-    //Input Data/Variables
+    //Initialize Variables by inputting from the command line
+    cout<<"This program converts feet^2 to Acres and miles^2"<<endl;
+    cout<<"Input the ft^2 area to convert"<<endl;
+    cin>>nft2;
     
     //Process or map the inputs to the outputs
+    nacres=nft2*CNVFTA;
+    nmiles2=nft2*CNVFTM;
     
     //Display/Output all pertinent variables
+    cout<<nft2<<" square feet = "<<nacres<<" acres"<<endl;
+    cout<<nft2<<" square feet = "<<nmiles2<<" square miles"<<endl;
     
     //Exit the program
     return 0;
