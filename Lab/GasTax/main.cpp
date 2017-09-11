@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
     //Declare and initialize Variables
     //Known Values
     float   pp=2.93f,    //Price at pump for a gallon of gas $/gallon
-            ft=0.184f,   //Federal Tax per Gallong $/gallon
+            ft=0.184f,   //Federal Tax per Gallon $/gallon
             st=0.36f,    //State Tax per Gallon $/gallon
             pt=0.0775f,  //State percentage sales tax
             oc=0.07f;    //Oil Company profit per Gallon
